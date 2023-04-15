@@ -1,16 +1,18 @@
+import { Notify } from "notiflix/build/notiflix-notify-aio";
+
 const INTERVAL_DELAY = 1000;
 
 const refs = {
   body: document.body, // For the better performance
-  buttonStart: document.querySelector('[data-start]'),
-  buttonStop: document.querySelector('[data-stop]'),
+  buttonStart: document.querySelector("[data-start]"),
+  buttonStop: document.querySelector("[data-stop]"),
 };
 
 let timerId = null;
 let isActive = false;
 
-refs.buttonStart.addEventListener('click', onButtonStartClick);
-refs.buttonStop.addEventListener('click', onButtonStopClick);
+refs.buttonStart.addEventListener("click", onButtonStartClick);
+refs.buttonStop.addEventListener("click", onButtonStopClick);
 
 function onButtonStartClick() {
   start();
@@ -64,11 +66,11 @@ function setBodyBackgroundColor(color) {
 }
 
 function announceStart() {
-  alert('Start generating random backgrounds!');
+  Notify.info("Start generating random backgrounds!");
 }
 
 function announceStop() {
-  alert('Stop generating random backgrounds!');
+  Notify.info("Stop generating random backgrounds!");
 }
 
 function getRandomHexColor() {
