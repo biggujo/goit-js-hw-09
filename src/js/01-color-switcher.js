@@ -39,6 +39,7 @@ function onButtonStopClick() {
 }
 
 function startSetRandomBodyBackgroundColor() {
+  setBodyBackgroundColor(getRandomHexColor());
   timerId = setInterval(() => {
     setBodyBackgroundColor(getRandomHexColor());
   }, INTERVAL_DELAY);
