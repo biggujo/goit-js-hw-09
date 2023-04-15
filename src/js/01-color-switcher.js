@@ -15,14 +15,6 @@ refs.buttonStart.addEventListener("click", onButtonStartClick);
 refs.buttonStop.addEventListener("click", onButtonStopClick);
 
 function onButtonStartClick() {
-  start();
-}
-
-function onButtonStopClick() {
-  stop();
-}
-
-function start() {
   if (isActive) {
     return;
   }
@@ -34,7 +26,7 @@ function start() {
   startSetRandomBodyBackgroundColor();
 }
 
-function stop() {
+function onButtonStopClick() {
   if (!isActive) {
     return;
   }
