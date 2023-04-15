@@ -1,7 +1,30 @@
+$gapDefault: 15px;
+$gapBig: $gapDefault * 2;
+$controlHeight: 36px;
+
+.control-panel {
+  display: flex;
+  align-content: stretch;
+  gap: 10px;
+  height: $controlHeight;
+
+  & > #datetime-picker {
+    padding-inline: 5px;
+    
+    font-size: 18px;
+  }
+
+  & > [data-start] {
+    padding-inline: 15px;
+
+    font-size: 18px;
+  }
+}
+
 .timer {
   display: flex;
   flex-direction: row;
-  column-gap: 30px;
+  column-gap: $gapBig;
 }
 
 .timer > .field {
