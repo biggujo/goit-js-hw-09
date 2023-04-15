@@ -7,11 +7,12 @@
   gap: 15px;
 
   transform: translate(-50%, -50%);
+
+  & > button {
+    padding-inline: 40px;
+    padding-block: 15px;
+
+    font-size: 24px;
+  }
 }
 
-.button-panel > button {
-  padding-inline: 40px;
-  padding-block: 15px;
-
-  font-size: 24px;
-}
